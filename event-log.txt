@@ -78,3 +78,137 @@ ValueError: int() base must be >= 2 and <= 36, or 0
 [20/09/2024 05:32:41][bot][INFO] -> Loaded 3 plugins.
 [20/09/2024 05:32:41][bot][INFO] -> Bot is now ready!
 [20/09/2024 05:32:44][uvicorn.access][INFO] -> 10.240.4.161:0 - "GET /1002119229070/30184 HTTP/1.1" 200
+[20/09/2024 09:18:23][bot][INFO] -> initializing...
+[20/09/2024 09:18:23][uvicorn][INFO] -> Web server is started!
+[20/09/2024 09:18:23][uvicorn][INFO] -> Server running on 0.0.0.0:8080
+[20/09/2024 09:18:23][bot][INFO] -> Telegram client is now started.
+[20/09/2024 09:18:23][bot][INFO] -> Loading bot plugins...
+[20/09/2024 09:18:23][bot][INFO] -> Loaded 3 plugins.
+[20/09/2024 09:18:23][bot][INFO] -> Bot is now ready!
+[20/09/2024 09:18:29][uvicorn.access][INFO] -> 10.240.2.99:0 - "GET / HTTP/1.1" 200
+[20/09/2024 09:18:30][uvicorn.access][INFO] -> 10.240.2.99:0 - "GET /favicon.ico HTTP/1.1" 404
+[20/09/2024 09:18:35][bot.server][ERROR] -> Exception on request GET /api
+Traceback (most recent call last):
+  File "/home/codespace/.local/lib/python3.12/site-packages/quart/app.py", line 1403, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/quart/app.py", line 1442, in full_dispatch_request
+    return await self.finalize_request(result, request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/quart/app.py", line 1566, in finalize_request
+    response = await self.make_response(result)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/quart/app.py", line 1386, in make_response
+    response = self.json.response(value)  # type: ignore[assignment]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/flask/json/provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/flask/json/provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/flask/json/provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type ObjectId is not JSON serializable
+[20/09/2024 09:18:35][uvicorn.access][INFO] -> 10.240.2.99:0 - "GET /api HTTP/1.1" 500
+[20/09/2024 09:18:57][bot.server][ERROR] -> Exception on request GET /api
+Traceback (most recent call last):
+  File "/home/codespace/.local/lib/python3.12/site-packages/quart/app.py", line 1403, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/quart/app.py", line 1442, in full_dispatch_request
+    return await self.finalize_request(result, request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/quart/app.py", line 1566, in finalize_request
+    response = await self.make_response(result)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/quart/app.py", line 1386, in make_response
+    response = self.json.response(value)  # type: ignore[assignment]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/flask/json/provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/flask/json/provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/flask/json/provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type ObjectId is not JSON serializable
+[20/09/2024 09:18:57][uvicorn.access][INFO] -> 10.240.2.99:0 - "GET /api?fp=66c6c7728ff03761fb818e66&name=xyz HTTP/1.1" 500
+[20/09/2024 09:19:06][bot.server][ERROR] -> Exception on request GET /api
+Traceback (most recent call last):
+  File "/home/codespace/.local/lib/python3.12/site-packages/quart/app.py", line 1403, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/quart/app.py", line 1442, in full_dispatch_request
+    return await self.finalize_request(result, request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/quart/app.py", line 1566, in finalize_request
+    response = await self.make_response(result)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/quart/app.py", line 1386, in make_response
+    response = self.json.response(value)  # type: ignore[assignment]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/flask/json/provider.py", line 214, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/flask/json/provider.py", line 179, in dumps
+    return json.dumps(obj, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/flask/json/provider.py", line 121, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type ObjectId is not JSON serializable
+[20/09/2024 09:19:06][uvicorn.access][INFO] -> 10.240.2.99:0 - "GET /api?fp=66c6c7728ff03761fb818e66&name=xyz HTTP/1.1" 500
+[20/09/2024 09:21:37][bot][INFO] -> initializing...
+[20/09/2024 09:21:37][uvicorn][INFO] -> Web server is started!
+[20/09/2024 09:21:37][uvicorn][INFO] -> Server running on 0.0.0.0:8080
+[20/09/2024 09:21:38][bot][INFO] -> Telegram client is now started.
+[20/09/2024 09:21:38][bot][INFO] -> Loading bot plugins...
+[20/09/2024 09:21:38][bot][INFO] -> Loaded 3 plugins.
+[20/09/2024 09:21:38][bot][INFO] -> Bot is now ready!
+[20/09/2024 09:21:41][uvicorn.access][INFO] -> 10.240.3.64:0 - "GET /api?fp=66c6c7728ff03761fb818e66&name=xyz HTTP/1.1" 200
+[20/09/2024 09:21:48][uvicorn.access][INFO] -> 10.240.3.64:0 - "GET /api?fp=66c6c7728ff03761fb818e66&name=xyz HTTP/1.1" 200
+[20/09/2024 09:22:00][uvicorn.access][INFO] -> 10.240.3.64:0 - "GET /api?fp=66c6c7728ff03761fb818e66&name=xyz HTTP/1.1" 200
+[20/09/2024 09:22:03][uvicorn.access][INFO] -> 10.240.3.64:0 - "GET /api?fp=66c6c7728ff03761fb818e66&name=xyz HTTP/1.1" 200
+[20/09/2024 09:22:20][uvicorn.access][INFO] -> 10.240.3.64:0 - "GET /api?fp=66c6c7728ff03761fb818e66&name=xyz HTTP/1.1" 200
+[20/09/2024 09:23:03][uvicorn.access][INFO] -> 10.240.3.64:0 - "GET /api?fp=66c6c7728ff03761fb818e66&name=xyz HTTP/1.1" 200
+[20/09/2024 09:23:29][uvicorn.access][INFO] -> 10.240.3.64:0 - "GET /api?fp=66c6c7728ff03761fb818e66&name=xyz HTTP/1.1" 200
+[20/09/2024 09:24:29][uvicorn.access][INFO] -> 10.240.3.64:0 - "GET /api?fp=66c6c7728ff03761fb818e66&name=xyz HTTP/1.1" 200
+[20/09/2024 09:24:32][uvicorn.access][INFO] -> 10.240.3.64:0 - "GET /api?fp=66c6c7728ff03761fb818e66&name=xyz HTTP/1.1" 200
+[20/09/2024 09:25:10][bot][INFO] -> initializing...
+[20/09/2024 09:25:10][uvicorn][INFO] -> Web server is started!
+[20/09/2024 09:25:10][uvicorn][INFO] -> Server running on 0.0.0.0:8080
+[20/09/2024 09:25:10][bot][INFO] -> Telegram client is now started.
+[20/09/2024 09:25:10][bot][INFO] -> Loading bot plugins...
+[20/09/2024 09:25:10][bot][INFO] -> Loaded 3 plugins.
+[20/09/2024 09:25:10][bot][INFO] -> Bot is now ready!
+[20/09/2024 09:25:27][uvicorn.access][INFO] -> 10.240.3.64:0 - "GET /api?fp=66c6c7728ff03761fb818e66&name=xyz HTTP/1.1" 200
+[20/09/2024 09:25:48][uvicorn.access][INFO] -> 10.240.3.64:0 - "GET /api?fp=66c6c7728ff03761fb818e66&name=xyz HTTP/1.1" 200
+[20/09/2024 09:25:50][uvicorn.access][INFO] -> 10.240.3.64:0 - "GET /api?fp=66c6c7728ff03761fb818e66&name=xyz HTTP/1.1" 200

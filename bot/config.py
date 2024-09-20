@@ -12,6 +12,10 @@ class Server:
     BIND_ADDRESS = env.get("BIND_ADDRESS", "0.0.0.0")
     PORT = int(env.get("PORT", 8080))
 
+class mongo:
+    uri = env.get("mongouri","mongodb+srv://admin:7U8w8NiEBsBdqMtU@anidb.lijkc.mongodb.net/?retryWrites=true&w=majority&appName=AniDb")
+    db = env.get("mongodb","filepress")
+
 # LOGGING CONFIGURATION
 LOGGER_CONFIG_JSON = {
     'version': 1,

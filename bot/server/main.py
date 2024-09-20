@@ -1,11 +1,37 @@
 from quart import Blueprint, Response, request, render_template, redirect
 from .error import abort
-from bot import TelegramBot
-from bot.config import Telegram, Server
+from bot import TelegramBot 
+from bot.config import Telegram, Server , mongo
 from math import ceil, floor
 from bot.modules.telegram import get_message, get_file_properties
+from pymongo import MongoClient
 
 bp = Blueprint('main', __name__)
+
+client = MongoClient(mongo.uri)
+
+db = client[mongo.db]
+
+
+
+@bp.route("/api")
+async def apiroute():
+    #get req arguments
+    fp = request.args.get("fp")
+    name = request.args.get("name")
+    #check if the file exists
+    file = db["files"].find_one({"fp":fp})
+    if file:
+        url = f"{Server.BASE_URL}/{file['ci']}/{file['tg']}"
+        return {"status":"success","url":url}
+    else:
+        checkinqu = db["queue"].find_one({"fp":fp})
+        if checkinqu:
+            return {"status":"processing","msg":"File in Queue"}
+        else:
+            db["queue"].insert_one({"fp":fp})
+            return {"status":"processing","msg":"Added to queue"}
+
 
 @bp.route('/')
 async def home():
