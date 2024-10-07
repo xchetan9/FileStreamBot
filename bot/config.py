@@ -8,8 +8,8 @@ class Telegram:
     BOT_USERNAME = env.get("TELEGRAM_BOT_USERNAME", "httestingrobot")
     BOT_TOKEN = env.get("TELEGRAM_BOT_TOKEN", "7437928410:AAGXHef5KjYqLopjA9FuvyL30Qi4DQxmYao")
 class Server:
-    BASE_URL = env.get("BASE_URL", "http://127.0.0.1:8080")
     BIND_ADDRESS = env.get("BIND_ADDRESS", "0.0.0.0")
+    BASE_URL = BIND_ADDRESS
     PORT = int(env.get("PORT", 8080))
 
 class mongo:
