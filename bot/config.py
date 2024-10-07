@@ -2,15 +2,15 @@ from os import environ as env
 
 
 class Telegram:
-    API_ID = int(env.get("TELEGRAM_API_ID", 7999622))
-    API_HASH = env.get("TELEGRAM_API_HASH", "0c6b5e046ae4aff8987e95b93c9ce281")
-    OWNER_ID = int(env.get("OWNER_ID", 6158188979))
+    API_ID = int(env.get("TELEGRAM_API_ID", 00))
+    API_HASH = env.get("TELEGRAM_API_HASH", "123")
+    OWNER_ID = int(env.get("OWNER_ID", 00))
     ALLOWED_USER_IDS = env.get("ALLOWED_USER_IDS", "").split()
-    BOT_USERNAME = env.get("TELEGRAM_BOT_USERNAME", "htfiles1bot")
+    BOT_USERNAME = env.get("TELEGRAM_BOT_USERNAME", "botusername")
     BOT_TOKEN = env.get(
-        "TELEGRAM_BOT_TOKEN", "7290722255:AAEReuBMLlevnRg0volQoY7gUd1IKH7nET8"
+        "TELEGRAM_BOT_TOKEN", "token"
     )
-    CHANNEL_ID = int(env.get("TELEGRAM_CHANNEL_ID", -1002122983096))
+    CHANNEL_ID = int(env.get("TELEGRAM_CHANNEL_ID", channelid))
     SECRET_CODE_LENGTH = int(env.get("SECRET_CODE_LENGTH", 12))
 
 
